@@ -28,15 +28,60 @@
   .button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
+
+  ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  body#bg-img {
+    background: url(./dist/img/intro-background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
 </style>
 </head>
 
 <body id="bg-img">
 <main>
-    <h1><a href="dist/index.html">John Kyker's Digital Portfolio</a></h1>
+    <h1>John Kyker's Digital Portfolio</h1>
+    <h2>Web Developer and Front-End Designer Student</h2>
+    <div class="mid-wrapper">
+      <div class="wrapper">
+          <ul class="stats">
+              <li>
+                  <strong>Academic Skills:</strong>
+                  <span>Strong education background</span>
+              </li>
+              <li>
+                  <strong>Problem Solving:</strong>
+                  <span>At work and with my hobbies</span>
+              </li>
+              <li>
+                  <strong>Reliable:</strong>
+                  <span>History of being honest, hardworking and diligent</span>
+              </li>
+          </ul>
+      </div>
+
+      <div class="testmonial">
+          <ul class="quotes">
+              <li>
+                  <blockquote>"John was a very good student. He attended class on a regular basis. He successfully completed all assignments. 
+                      He communicated effectigvely in class discussions. 
+                      John wrote a number of papers in the four classes. 
+                      These papers documented John's very good organization, research and writing skills."</blockquote>
+                  <cite>-- Tim Anderson, Ph.D.</cite>
+              </li>
+              <li>
+                  <blockquote>"Through my observations of his teaching, I can say that John has a deep understanding of his content area; 
+                      he engages his students by making connections to real-time envets; 
+                      and he creates a positive learning environment by treating his students with respect."</blockquote>
+                  <cite>-- Johnny Thieken, Ph.D.</cite>
+              </li>
+          </ul>
+      </div>
     <button class="button"><a href="dist/index.html">Enter</a></button>
 </main>
 </body>
-<script src="js/main.js"></script>
-<script src="https://kit.fontawesome.com/80c1c40743.js" crossorigin="anonymous"></script>
 </html>
