@@ -3,6 +3,7 @@ let duration = 93;
 let idCount = 0;
 let baseBro = {
   name: "",
+  img: "",
   id: idCount,
   option1: 0,
   option2: 0,
@@ -13,6 +14,7 @@ let baseBro = {
 };
 let currentBro = {
     name: "",
+    img: "",
     id: idCount,
     option1: 0,
     option2: 0,
@@ -119,7 +121,7 @@ function updateDashboard(){
               legend: {display: false},
               title: {
                 display: true,
-                text: bros[i].name + " Current Mood. Bro received " + bros[i].total + " white claw"
+                text: bros[i].name + " Current Mood. Bro has received " + bros[i].total + " white claw"
               }
             }
           });
@@ -181,6 +183,6 @@ function addNewBro() {
 
   /* To Do: Different random prompts after timer
   * Upload Profile Picture function
-  * CSS touch up
+  * 
   * Sound Effect
   */

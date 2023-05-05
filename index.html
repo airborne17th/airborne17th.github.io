@@ -10,13 +10,14 @@
   </head>
   <body>
     <main>
-        <h1>Welcome to the Bro Dashboard!!!</h1> 
+        <h1>Welcome to the Bro Dashboard!</h1> 
 
       <div id="userArea">
       <p>What's your name bro?</p>
 <input type="text" id="name-input">
 <button onclick="addNewBro()">New Bro!</button>
 <p>Change the current bro! The current active bro is <span id="curActive">no one! Add a new bro!</span></p>
+<img id="currentBroImg"></img>
 <select id="baseBro-select" onChange="selectCurrentBro()">
     
     <!-- Add a default option element with a value of "" and "disabled" and "selected" attributes -->
