@@ -177,3 +177,10 @@ function addNewBro() {
     console.log(bros);
     updateBrosSelect();
   }
+
+
+  /* To Do: Different random prompts after timer
+  * Upload Profile Picture function
+  * CSS touch up
+  * Sound Effect
+  */
