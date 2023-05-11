@@ -23,10 +23,12 @@ let currentBro = {
     option5: 0,
     total: 0
   };
+
+  let bros = [];
   let xValues = ["Vibing", "Horny", "Hungry", "Need a Drink", "Existential Dread"];
   let yValues = [];
   let barColors = ["red", "green","blue","orange","purple", "pink"];
-let bros = [];
+let questions = ["How are you feeling bro?", "Have you been getting enough sleep lately?", "How's the love life, bro?", "How's work or study been going, bro?", "It is party time, bro?"];
 let darkMode = false;
 // Get the timer element from the DOM
 const timer = document.getElementById('timer');
@@ -45,6 +47,7 @@ function updateTimer() {
 
   // Stop the timer if we've reached zero
   if (duration < 0) {
+    updateQuestion();
     duration = 93;
   }
 }
@@ -62,7 +65,23 @@ function toggleDark() {
   }
 }
 
+function updateQuestion(){
+  let currentQ = Math.floor(Math.random() * (questions.length - 1));
+  document.getElementById('question').innerHTML = "";
+  document.getElementById('question').innerHTML = questions[currentQ];
+}
 
+function uploadPicture(){
+  const fileInput = document.querySelector('#imageUpload');
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+  reader.addEventListener('load', () => {
+    currentBro.img = reader.result;
+    console.log(currentBro);
+  });
+  reader.readAsDataURL(file);
+  updateProfilePicture();
+}
 
 function responseReceived(option) {
     if(currentBro.name != ""){
@@ -93,8 +112,9 @@ function responseReceived(option) {
 
   bros[currentBro.id] = currentBro;
   console.log(currentBro);
+  updateQuestion();
   updateDashboard();
-    }
+  }
 }
 
 function updateDashboard(){
@@ -154,7 +174,6 @@ function addNewBro() {
     // Log the updated array to the console
     console.log(bros);
     }
-   
   }
 
   function updateBrosSelect() {
@@ -170,6 +189,7 @@ function addNewBro() {
       baseBroSelect.appendChild(option);
     }
     document.getElementById('curActive').innerHTML = currentBro.name;
+    updateProfilePicture();
   }
   
   function selectCurrentBro(){
@@ -180,9 +200,9 @@ function addNewBro() {
     updateBrosSelect();
   }
 
-
-  /* To Do: Different random prompts after timer
-  * Upload Profile Picture function
-  * 
-  * Sound Effect
-  */
+  function updateProfilePicture(){
+    document.getElementById('currentBroImg').setAttribute('src', currentBro.img);
+    document.getElementById('currentBroImg').setAttribute('alt', 'Current Bro Image');
+    document.getElementById('currentBroImg').setAttribute('width', '80');
+    document.getElementById('currentBroImg').setAttribute('height', '80');
+  }
