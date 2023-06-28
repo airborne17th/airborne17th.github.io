@@ -1,0 +1,53 @@
+#die {
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+    background: blue;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: Menlo, monospace;
+    font-size: 4em;
+    line-height: 100px;
+    text-align: center;
+  }
+  #enemyDie {
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+    background: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: Menlo, monospace;
+    font-size: 4em;
+    line-height: 100px;
+    text-align: center;
+  }
+  #dieText{
+    height: 25px;
+    width: 25px;
+    margin: 2px auto;
+    text-align: center;
+    display: table;
+  }
+#charTable{
+  max-width: 300px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+#gameSection:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Clear floats after the columns */
+#dieSection:after {
+  content: "";
+  display: table;
+  clear: both;
+}

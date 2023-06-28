@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./gacha.js"></script>
+    <script src="./main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>$( document ).ready(function() {initializeDrop(); }); </script>
+    <script>$( document ).ready(function() {initializeParty(); }); </script>
+    <script>$( document ).ready(function() {initializeEnemy(); }); </script>
+  </head>
+  <body>
+    <main>
+        <div id="gachaSection">
+        <input type="button" onclick="location.href='./gacha.html';" value="Go to Gacha!" />
+        <br /><br />
+        </div>
+
+      </div>
+      <div id="gameSection">
+        <div class="column">
+        <div id="characterInfoArea">
+        </div>
+        <div id="statusEffectArea">
+      </div>
+    </div>
+    <div class="column">
+      <div id="enemyInfoArea">
+      </div>
+      <div id="enemyStatusEffectArea">
+    </div>
+  </div>
+  </div>
+          <div class="actionArea">
+            <table>
+              <tr>
+                <td><button class="roll-button" onclick="playerTurn(0)">Attack</button></td>
+                <td><button onclick="playerTurn(1)">Skill</button></td>
+                <td><button onclick="playerTurn(2)">Ultimate</button></td>
+                <td>Swap</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td id="charTable"><span id="skillName"></span><br /><span id="skillCost"></span>
+                  <div id="skillSelectContainer" style="display: none;">
+                    <select id="charSelect"></select>
+                  </div>                  
+                </td>
+                <td id="charTable"><span id="ultName"></span></td>
+                <td><button onclick="playerTurn(3)"><span id="reserveCharName"></span></button></td>
+                <div id="ultSelectContainer" style="display: none;">
+                  <select id="charSelect2"></select>
+                </div>         
+              </tr>
+              <tr>
+                <td></td>
+                <td id="charTable"><span id="skillDesc"></span></td>
+                <td id="charTable"><span id="ultDesc"></span></td>
+                <td><button onclick="playerTurn(4)"><span id="reserveChar2Name"></span></button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td id="charTable"><span id="skillDesc"></span></td>
+                <td id="charTable"><span id="ultDesc"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td id="charTable"><span id="skillDesc"></span></td>
+                <td id="charTable"><span id="ultDesc"></span></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        <div id="dieSection">
+        <div class="column">
+        <span id="dieText">Player:</span>
+        <div id="die"></div>
+        </div>
+        <div class="column">
+        <span id="dieText">Enemy:</span>
+        <div id="enemyDie"></div>
+        </div>
+        </div>
+        <div id="displayActionResult"></div>
+        <div id="displayEnemyActionResult"></div>
+      </div>
+      <br /><br />
+      <div id="informationSection">
+        </div>
+        <div id="info">
+        </div>
+    </main>
+  </body>
+</html>
